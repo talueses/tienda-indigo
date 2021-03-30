@@ -143,7 +143,7 @@
 
               @if (!auth('boda')->check())
               <div class="col-auto">
-                <a href="#" class="btn btn-link text-secondary add_to_cart_btn" data-item="{{ $product->id }}" data-img="{{ $product->img }}" data-title="{{ $product->nombre }}" data-price="{{ $product->precio-$product->descuento }}" ><i class="fa fa-cart-plus"></i> </a>
+                <a href="#" class="btn btn-link text-secondary add_to_cart_btn" data-slug="{{ $product->slug }}"  data-item="{{ $product->id }}" data-img="{{ $product->img }}" data-title="{{ $product->nombre }}" data-price="{{ $product->precio-$product->descuento }}" ><i class="fa fa-cart-plus"></i> </a>
               </div>
               @endif
 
@@ -153,7 +153,7 @@
             @if (auth('boda')->check())
             <div class="row my-2">
               <div class="col-md-12">
-                  <button @click="[openModal=true, productId='{{$product->id}}']" class="btn btn-danger subtitle agregar-cuenta-novios linear p-2" data-img="{{ $product->img }}" data-title="{{ $product->nombre }}" data-price="{{ $product->precio }}" data-producto-id="{{ $product->id }}" data-cuenta-id="{{ auth('boda')->user()->id }}" type="button" name="button">Agregar a lista de regalos<i class="fa fa-gift ml-2"></i></button>
+                  <button @click="[openModal=true, productId='{{$product->id}}']" class="btn btn-danger subtitle agregar-cuenta-novios linear p-2" data-slug="{{ $product->slug }}" data-img="{{ $product->img }}" data-title="{{ $product->nombre }}" data-price="{{ $product->precio }}" data-producto-id="{{ $product->id }}" data-cuenta-id="{{ auth('boda')->user()->id }}" type="button" name="button">Agregar a lista de regalos<i class="fa fa-gift ml-2"></i></button>
               </div>
             </div>
             @endif

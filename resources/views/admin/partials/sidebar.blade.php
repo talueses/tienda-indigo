@@ -54,6 +54,7 @@
       <a class="{{ request()->is('admin/orders/pending') ? 'dropdown-item active' : 'dropdown-item' }}" href="{{ route('admin.orders.pending') }}"> Pendientes de pago </a>
       <a class="{{ request()->is('admin/orders/paid') ? 'dropdown-item active' : 'dropdown-item' }}" href="{{ route('admin.orders.paid') }}">Pagadas</a>
       <a class="{{ request()->is('admin/orders/tracking') ? 'dropdown-item active' : 'dropdown-item' }}" href="{{ route('admin.orders.tracking') }}"> Enviado </a>
+      <a class="{{ request()->is('admin/orders/cancelled') ? 'dropdown-item active' : 'dropdown-item' }}" href="{{ route('admin.orders.cancelled') }}"> Cancelado </a>
     </div>
   </li>
 

@@ -273,7 +273,8 @@ Route::group(['middleware' => 'admin'], function() {
 	Route::get('/admin/orders', 'OrdenController@index' )->name('admin.orders');
 	Route::get('/admin/orders/pending', 'OrdenController@pending' )->name('admin.orders.pending');
 	Route::get('/admin/orders/calculating', 'OrdenController@calculating' )->name('admin.orders.calculating');
-	Route::get('/admin/orders/tracking', 'OrdenController@tracking' )->name('admin.orders.tracking');
+    Route::get('/admin/orders/tracking', 'OrdenController@tracking' )->name('admin.orders.tracking');
+    Route::get('/admin/orders/cancelled', 'OrdenController@cancelled' )->name('admin.orders.cancelled');
 	Route::get('/admin/orders/paid', 'OrdenController@paid' )->name('admin.orders.paid');
 	Route::get('/admin/orders/create', 'OrdenController@create')->name('admin.order.create');
 	Route::put('/admin/orders/{id}', 'OrdenController@update')->name('admin.order.update');
@@ -284,7 +285,8 @@ Route::group(['middleware' => 'admin'], function() {
 	Route::get('/admin/orders/export', 'OrdenController@export')->name('admin.order.export');
 	Route::get('/admin/orders/export/pending', 'OrdenController@exportPending')->name('admin.order.export.pending');
 	Route::get('/admin/orders/export/calculating', 'OrdenController@exportCalculating')->name('admin.order.export.calculating');
-	Route::get('/admin/orders/export/tracking', 'OrdenController@exportTracking')->name('admin.order.export.tracking');
+    Route::get('/admin/orders/export/tracking', 'OrdenController@exportTracking')->name('admin.order.export.tracking');
+    Route::get('/admin/orders/export/cancelled', 'OrdenController@exportCancelled')->name('admin.order.export.cancelled');
 	Route::get('/admin/orders/export/paid', 'OrdenController@exportPaid')->name('admin.order.export.paid');
 	Route::post('/admin/orders/{id}/updateshipcost', 'OrdenController@updateShipCost')->name('admin.order.updateShipCost');
 	Route::post('/admin/orders/{id}/updatetracking', 'OrdenController@updateTracking')->name('admin.order.updateTracking');

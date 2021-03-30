@@ -67,9 +67,9 @@ $('#product_detail_add_to_cart_btn').click(function(e){
 $('.add_to_cart_btn').click(function(e)
 {
   e.preventDefault();
-
   var $this = $(this);
-  var productId = $this.data('item');
+    var productId = $this.data('item');
+    var slug = $this.data('slug');
   var img = $this.data('img');
   var id = $this.data('item'); //id
   var title = $this.data('title');
@@ -79,7 +79,9 @@ $('.add_to_cart_btn').click(function(e)
   $('#modal_'+modalName+'_title').html(title);
   $('#modal_'+modalName+'_img').attr('src', '/uploads/products/'+img);
   $('#modal_'+modalName+'_price').html(price);
-  $('#modal_'+modalName+'_product_id').val(productId);
+    $('#modal_'+modalName+'_product_id').val(productId);
+    $('#modal_'+modalName+'_href_eyes').attr('href',"producto/"+slug);
+
 
   $('#layer_cart_product_title').html(title);
   $('#modal_cart_img').attr('src', '/uploads/products/'+img);

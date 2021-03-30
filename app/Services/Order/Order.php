@@ -82,6 +82,22 @@ class Order implements Contracts\OrderContract  {
 							->get();
 		}
 
+        public function cancelled() {
+
+            return Orden::join('users', 'users.id', '=', 'ordenes.user_id')
+                ->join('orden_producto', 'orden_producto.orden_id', '=', 'ordenes.id')
+                ->join('productos', 'productos.id', '=', 'orden_producto.producto_id')
+                ->select('ordenes.id as orden_id',  'ordenes.estado',
+                    DB::raw('CONCAT(users.name, " ", users.apellidos) as usuario'),
+                    'ordenes.created_at', 'orden_producto.cantidad as productos',
+                    'orden_producto.lista_regalo_id',
+                    DB::raw('sum((productos.precio + orden_producto.recargo) * orden_producto.cantidad) as total'))
+                ->where('ordenes.estado','=','Cancelado')
+                ->groupBy('orden_id')
+                ->orderBy('orden_id', 'DESC')
+                ->get();
+        }
+
 		public function paid() {
 			
 			return Orden::join('users', 'users.id', '=', 'ordenes.user_id')

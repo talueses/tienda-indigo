@@ -132,7 +132,7 @@
 
                         <div class="form-row">
                           <div class="form-group col-md-6">
-                            <label for="sku" class="col-form-label">Colores</label>
+                            <label class="col-form-label">Colores</label>
                             <div>
                             <input type="hidden" id="producto_colores" name="producto_colores" value="">
 
@@ -404,6 +404,24 @@
     }
     calcularStock();
   }
+  function editRow(){
+      var colorName = $('#color_name_table').val();
+      var colorStock = $('#color_stock_table').val();
+
+      if(colorName.length == 0 || colorStock.length == 0 || isNaN(colorStock)){
+          return;
+      }
+
+      //var repetido = validarColor(colorName);
+
+      listaColores.push({color: colorName.toLowerCase(), stock: parseInt(colorStock)});
+      rr(colorName, colorStock);
+
+      setInputValue();
+      $('#producto_colores').val(JSON.stringify(listaColores));
+
+      calcularStock();
+  }
   function removeRow(button){
     button.closest("tr").remove();
     var color = button.data('color');
@@ -424,7 +442,7 @@
         tr += "<td width='220'>";
         tr += "<span class='color_name_table'>"+colorName+"</span>";
         tr += "<td><span class='color_stock_table'>"+colorStock+"</span></td>";
-        tr += "<td><i class='fas fa-trash-alt remove' data-color="+colorName+"></i></td>";
+          tr += "<td><i class='fas fa-edit edit' data-color="+colorName+"></i> - <i class='fas fa-trash-alt remove' data-color="+colorName+"></i></td>";
         tr += "</tr>";
 
         $('#productoColorTb').append(tr);
@@ -455,16 +473,86 @@
 
   /* Doc ready */
   $(".add").on('click', function (){
-    if($("#productoColorTb tr").length < 17){
-      addRow();
-    }
-    $(this).closest("tr").appendTo("#productoColorTb");
+      if($("#productoColorTb tr").length < 17) addRow();
+      $(this).closest("tr").appendTo("#productoColorTb");
   });
 
   $("#productoColorTb").on('click', '.remove', function (){
       removeRow($(this));
   });
 
+  $("#productoColorTb").on('click', '.edit', function (){
+      var parent = $(this).parent().parent();
+      var color_name_table = parent.find(".color_name_table");
+      var color_stock_table = parent.find(".color_stock_table");
+
+      var input_color_name_table = $("<input/>", {
+          type: "text",
+          class: "form-control color_name_table",
+          placeholder: "Ingrese color",
+          value: color_name_table.text()
+      });
+      var input_color_stock_table = $("<input/>", {
+          type: "number",
+          class: "form-control color_stock_table",
+          placeholder: "Ingrese color",
+          value: color_stock_table.text()
+      });
+      color_name_table.after(input_color_name_table);
+      color_stock_table.after(input_color_stock_table);
+      color_name_table.remove();
+      color_stock_table.remove();
+
+      $(this).removeClass().addClass("fas fa-save save")
+  });
+
+
+  $("#productoColorTb").on('click', '.save', function (){
+      var parent = $(this).parent().parent();
+      var color_name_table = parent.find(".color_name_table");
+      var color_stock_table = parent.find(".color_stock_table");
+
+      console.log("===> ", color_name_table);
+      console.log("color_name_table ==> ", color_name_table.val());
+      console.log("listaColores => ", listaColores);
+
+      var color = $(this).data('color');
+      var input_color_name_table = $("<label/>", {
+          class: "color_name_table",
+          text: color_name_table.val()
+      });
+      var input_color_stock_table = $("<label/>", {
+          class: "color_stock_table",
+          text: color_stock_table.val()
+      });
+      //$(this).attr("data-color",color_name_table.val());
+      color_name_table.after(input_color_name_table);
+      color_stock_table.after(input_color_stock_table);
+      color_name_table.remove();
+      color_stock_table.remove();
+
+      $.each(listaColores, function(x, item){
+          console.log("item.color ==> ", item);
+          if (item.color.toLowerCase() == color.toLowerCase()) {
+              item.color = color_name_table.val();
+              item.stock = color_stock_table.val();
+              //repetido = true;
+          }
+      });
+      $(this).attr("data-color",color_name_table.val());
+      console.log("listaColores 2 => ", listaColores);
+      $(this).removeClass().addClass("fas fa-edit edit");
+      //rr(colorName, colorStock);
+
+      setInputValue();
+      $('#producto_colores').val(JSON.stringify(listaColores));
+      calcularStock();
+
+      //$("#color_name_table").val(parent.find(".color_name_table").text());
+      //$("#color_stock_table").val(parent.find(".color_stock_table").text());
+      //$(".add").text("Editar");
+      //removeRow($(this));
+  });
 
 
 

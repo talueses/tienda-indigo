@@ -62,13 +62,13 @@
                </button>
             </div>
               <div class="col-auto">
-                <a href="{{ route('home.tienda.producto', $product->slug) }}" class="btn btn-link text-secondary"><i class="fa fa-eye"></i> </a>
+                <a href="javascript:void(0);" id="modal_add_product_cart_href_eyes" class="btn btn-link text-secondary"><i class="fa fa-eye"></i> </a>
               </div>
 
               @if (!auth('boda')->check())
-              <div class="col-auto">
+              <!--<div class="col-auto">
                 <a href="#" class="btn btn-link text-secondary add_to_cart_btn" data-item="{{ $product->id }}" data-img="{{ $product->img }}" data-title="{{ $product->nombre }}" data-price="{{ $product->precio-$product->descuento }}" ><i class="fa fa-cart-plus"></i> </a>
-              </div>
+              </div>-->
               @endif
 
             </div>

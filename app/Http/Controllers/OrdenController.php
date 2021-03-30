@@ -82,6 +82,13 @@ class OrdenController extends Controller
         return view('admin.tienda.ordenes.index')->withOrdenes($ordenes);
     }
 
+    public function cancelled()
+    {
+        $ordenes = $this->order->cancelled();
+
+        return view('admin.tienda.ordenes.index')->withOrdenes($ordenes);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -442,6 +449,32 @@ class OrdenController extends Controller
 				$download_name = 'ORDENES_'.date_create('now')->format('d-m-Y_H:i:s').'.xlsx';
 			
 				return (new OrdersMultiSheetsByStatus($names, $headers, $results))->download($download_name);
+
+    }
+
+    public function exportCancelled()
+    {
+
+        $names = [];
+        $headers = [  'ID','Cliente', 'Total', 'Fecha', 'Estado' ];
+
+        $orders = $this->order->cancelled();
+
+        $results = [];
+
+        foreach ($orders as $k => $order) {
+            $results[$order->estado][$k]['id'] = $order->orden_id;
+            $results[$order->estado][$k]['cliente'] = $order->usuario;
+            $results[$order->estado][$k]['total'] = $order->total;
+            $results[$order->estado][$k]['fecha'] = $order->created_at;
+            $results[$order->estado][$k]['estado'] = $order->estado;
+            array_push($names, $order->estado);
+        }
+        $names = array_unique($names);
+
+        $download_name = 'ORDENES_'.date_create('now')->format('d-m-Y_H:i:s').'.xlsx';
+
+        return (new OrdersMultiSheetsByStatus($names, $headers, $results))->download($download_name);
 
     }
 

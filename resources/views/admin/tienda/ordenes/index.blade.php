@@ -12,7 +12,7 @@
             - Tracking
           @elseif(request()->is('admin/orders/paid'))
             - Pagadas
-          @elseif(request()->is('admin/orders/cancel'))
+          @elseif(request()->is('admin/orders/cancelled'))
             - Cancelado
           @endif
         </h2>
@@ -36,6 +36,8 @@
                     href="{{ route('admin.order.export.tracking') }}"
                   @elseif(request()->is('admin/orders/paid'))
                     href="{{ route('admin.order.export.paid') }}"
+                  @elseif(request()->is('admin/orders/cancelled'))
+                     href="{{ route('admin.order.export.cancelled') }}"
                   @endif
                   style="cursor:pointer;text-decoration:underline;"><i class="fas fa-file-excel"></i> Descargar Excel</a>
               </div>
