@@ -1,0 +1,53 @@
+.btn {
+  font-size: 13px;
+}
+.btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+
+    &:active,
+    &:focus,
+    &:hover  {
+        background-color: darken($primary-color, 2) !important;
+    }
+}
+
+.btn-default,
+.btn-action {
+	font-size: 13px;
+    background-color: white;
+    border-color: #adadad;
+    //height: 31px;
+    color: #676767;
+    //padding: 6px 9px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+
+	a {
+		text-decoration: none;
+	}
+
+    &:active,
+    &:focus,
+    &:hover {
+    	background-color: $primary-color;
+  		border-color: $primary-color;
+  		color: white;
+    }
+
+    &:disabled {
+      background-color: #fdfdfd;
+      border-color: #c9c9c9;
+      color: #c9c9c9;
+      cursor: no-drop;
+    }
+
+    &.btn-primary {
+        background-color: $primary-color;
+        color: white;
+    }
+
+}
+
+.dropdown-item {
+    font-size: 0.8em;
+}

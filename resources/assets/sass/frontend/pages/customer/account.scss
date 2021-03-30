@@ -1,0 +1,50 @@
+.customer-body {
+  form {
+    label {
+      font-size: 0.9em;
+    }
+  }
+}
+
+.customer-menu {
+  .menu-title {
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #525252;
+  }
+
+  ul {
+    li {
+      padding-left: 0;
+      a {
+        font-size: 0.9em;
+        color: #3f3f40;
+
+        &.active {
+          color: #000000;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.table-c-review {
+  background-color: white;
+  table {
+    thead {
+      th {
+        font-size: 0.93em;
+      }
+    }
+
+    td {
+      font-size: 0.9em;
+    }
+  }
+
+  .order-total {
+    font-weight: 800;
+    color: #e23f40;
+  }
+}

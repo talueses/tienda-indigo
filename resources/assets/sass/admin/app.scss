@@ -1,0 +1,24 @@
+// Import Custom Variables
+@import "variables.scss";
+
+// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Import Custom SCSS
+@import "mixins.scss";
+@import "global.scss";
+@import "utilities.scss";
+@import "navbar.scss";
+@import "cards.scss";
+@import "login.scss";
+@import "footer.scss";
+
+
+@import "vendor/datatables";
+@import "components/buttons";
+@import "components/forms";
+@import "components/navigation";
+@import "components/table";
+
+
+@import "vendor/bsdatepicker";
