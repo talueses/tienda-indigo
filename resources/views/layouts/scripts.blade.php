@@ -1,6 +1,5 @@
 @if(Route::current())
     @if( Route::current()->getName() == 'home.cart' || Route::current()->getName() == 'cuenta.orden.detalle' )
-    <script src="https://checkout.culqi.com/js/v3"></script>
     @endif
 @endif
 <script type="text/javascript">
@@ -17,7 +16,7 @@
   		color: 'black'
   	}
   });
-}
+};
 </script>
 <script src="{{ asset('js/main.js') }}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBYaD9zJPavbe_l7VyKJdCl5h-X3qlSyI&callback=initMap"></script>

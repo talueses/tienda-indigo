@@ -1,7 +1,7 @@
 /*@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');*/
 /*@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700');*/
 /*@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500');*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600,700');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600,700");
 @import "~bootstrap/scss/bootstrap";
 @import "variables";
 @import "mixins/mixins";
@@ -17,14 +17,12 @@
 
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica"),
-  local("Helvetica Neue"),
-  url('/fonts/helvetica.ttf');
+  src: local("Helvetica"), local("Helvetica Neue"), url("/fonts/helvetica.ttf");
   font-weight: normal;
 }
 
 body {
-  font-family: $font-text, 'sans-serif';
+  font-family: $font-text, "sans-serif";
   font-weight: 300;
 }
 
@@ -32,14 +30,15 @@ b,
 strong {
   font-weight: bold;
 }
-ul, ol {
-	padding-left: 18px;
+ul,
+ol {
+  padding-left: 18px;
 }
 
 hr {
   height: 1px;
   border-width: 0px;
-  background-color: lighten(map-get($theme-colors,'dark'), 75%);
+  background-color: lighten(map-get($theme-colors, "dark"), 75%);
   width: 100%;
   margin: 0;
 }
@@ -49,11 +48,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-text, 'sans-serif' !important;
+  font-family: $font-text, "sans-serif" !important;
   font-weight: 600;
 }
-p, ul, li, input {
-  font-family: $font-text, 'sans-serif';
+p,
+ul,
+li,
+input {
+  font-family: $font-text, "sans-serif";
   font-weight: 300;
 }
 
@@ -94,7 +96,7 @@ button:focus {
   border-radius: 0 !important;
 }
 .bg-black {
-  background-color: map-get($theme-colors, 'black') !important;
+  background-color: map-get($theme-colors, "black") !important;
 }
 
 #g_maps_contact {
@@ -103,20 +105,22 @@ button:focus {
 }
 
 h3 {
-    &.simple-title {
-      a {
-        color: black;
-        text-decoration: none;
+  &.simple-title {
+    a {
+      color: black;
+      text-decoration: none;
 
-        font-weight: bold;
+      font-weight: bold;
 
-        &:hover {
-          color: #4a4a4a;
-        }
+      &:hover {
+        color: #4a4a4a;
       }
     }
+  }
 }
-
+#monto {
+  background-color: #5c116e;
+}
 form {
   label,
   .col-form-label,
@@ -138,17 +142,17 @@ form {
   appearance: none !important;
 }
 select.form-control {
-    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNy43cHgiIGhlaWdodD0iNC4zcHgiIHZpZXdCb3g9IjAgMCA3LjcgNC4zIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA3LjcgNC4zIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiM5OTk5OTkiIGQ9Ik03LjEsMC4xQzYuNywwLjUsMy45LDMuMiwzLjksMy4yUzEsMC41LDAuNiwwLjFTMCwwLjcsMCwwLjdsMy45LDMuNmwzLjgtMy42QzcuNywwLjcsNy41LTAuMyw3LjEsMC4xeiIvPg0KPC9zdmc+DQo=")!important;
-    background-position: right 10px center !important;
-    background-repeat: no-repeat !important;
-    padding-right: 25px;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNy43cHgiIGhlaWdodD0iNC4zcHgiIHZpZXdCb3g9IjAgMCA3LjcgNC4zIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA3LjcgNC4zIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiM5OTk5OTkiIGQ9Ik03LjEsMC4xQzYuNywwLjUsMy45LDMuMiwzLjksMy4yUzEsMC41LDAuNiwwLjFTMCwwLjcsMCwwLjdsMy45LDMuNmwzLjgtMy42QzcuNywwLjcsNy41LTAuMyw3LjEsMC4xeiIvPg0KPC9zdmc+DQo=") !important;
+  background-position: right 10px center !important;
+  background-repeat: no-repeat !important;
+  padding-right: 25px;
 }
 
 header {
-  background: map-get($theme-colors, 'light');
+  background: map-get($theme-colors, "light");
   position: fixed;
   z-index: 99;
-  box-shadow: 0px 1px 2px rgba(189,189,189, .5);
+  box-shadow: 0px 1px 2px rgba(189, 189, 189, 0.5);
   width: 100%;
   //height:83px;
   clear: both;
@@ -162,15 +166,15 @@ header {
     }
   }
   .ecommerce-menu {
-    background: map-get($theme-colors, 'dark');
+    background: map-get($theme-colors, "dark");
     padding: 1.35em 0em;
     .responsive-menu {
       text-align: center;
       .responsive-menu-item {
-        margin: auto .3em;
+        margin: auto 0.3em;
         font-size: 1.2em;
         a {
-          color: map-get($theme-colors, 'light');
+          color: map-get($theme-colors, "light");
         }
       }
     }
@@ -179,11 +183,11 @@ header {
 
 .clearheader {
   height: 75px;
-  background: map-get($theme-colors, 'light');
+  background: map-get($theme-colors, "light");
 }
 section.main-content {
   //background:  map-get($theme-colors, 'light');
-  background: #fbfbfb;//#f9f9f9;
+  background: #fbfbfb; //#f9f9f9;
   min-height: 300px;
 }
 .contenido {
@@ -194,7 +198,7 @@ section.main-content {
 .us-sec {
   .brnd {
     width: 50%;
-    @include aspect-ratio(3,3);
+    @include aspect-ratio(3, 3);
     display: inline-block;
     float: left;
     margin-right: 2em;
@@ -210,7 +214,6 @@ section.main-content {
   }
 }
 .carousel {
-
   .carousel-indicators li {
     border: 1px solid #ccc;
   }
@@ -234,8 +237,8 @@ section.main-content {
   margin: 0;
   list-style: none;
   .responsive-menu-item {
-    margin: .5em;
-    padding: .3em .5em;
+    margin: 0.5em;
+    padding: 0.3em 0.5em;
     cursor: pointer;
 
     &.active {
@@ -245,7 +248,7 @@ section.main-content {
     }
 
     a {
-      color: map-get($theme-colors, 'dark');
+      color: map-get($theme-colors, "dark");
       text-decoration: none;
     }
   }
@@ -256,7 +259,7 @@ section.main-content {
   margin: 0;
   .list-socials-item {
     display: inline-block;
-    padding: .3em .3em;
+    padding: 0.3em 0.3em;
     margin: auto;
     font-size: 1.5em;
     a {
@@ -265,21 +268,21 @@ section.main-content {
       justify-content: center;
       text-decoration: none;
 
-      color: map-get($theme-colors, 'light');
+      color: map-get($theme-colors, "light");
     }
   }
   &.fixed {
     position: fixed;
     right: 0;
     top: 200px;
-    background-color: map-get($theme-colors, 'dark');
+    background-color: map-get($theme-colors, "dark");
     z-index: 99;
-    padding: .6em .8em .6em .6em;
+    padding: 0.6em 0.8em 0.6em 0.6em;
     border-radius: 20px 0 0 20px;
     .list-socials-item {
       display: block;
       a {
-        color: map-get($theme-colors, 'light');
+        color: map-get($theme-colors, "light");
         text-decoration: none;
       }
     }
@@ -287,19 +290,19 @@ section.main-content {
 }
 
 .r16-9 {
-  @include aspect-ratio(16,9);
+  @include aspect-ratio(16, 9);
 }
 .r8-3 {
-  @include aspect-ratio(8,3);
+  @include aspect-ratio(8, 3);
 }
 .r4-3 {
-  @include aspect-ratio(4,3);
+  @include aspect-ratio(4, 3);
 }
 .r5-1 {
-  @include aspect-ratio(5,1);
+  @include aspect-ratio(5, 1);
 }
 .r1-1 {
-  @include aspect-ratio(1,1);
+  @include aspect-ratio(1, 1);
 }
 
 .img-cont-full {
@@ -322,7 +325,7 @@ section.main-content {
   h3 {
     text-transform: uppercase;
     font-weight: 500;
-    margin-bottom: .7em;
+    margin-bottom: 0.7em;
     padding-left: 3em;
   }
   .btn {
@@ -352,8 +355,8 @@ section.main-content {
       margin: auto;
     }
     .desc {
-      font-size: .85em;
-      margin-top: .5em;
+      font-size: 0.85em;
+      margin-top: 0.5em;
       height: 60px;
     }
   }
@@ -364,8 +367,8 @@ section.main-content {
       text-transform: uppercase;
       display: block;
       &:first-child {
-        border-bottom: 1px solid map-get($theme-colors, 'dark');
-        padding: 0 .5em .5em 0;
+        border-bottom: 1px solid map-get($theme-colors, "dark");
+        padding: 0 0.5em 0.5em 0;
         display: inline-block;
       }
     }
@@ -385,7 +388,6 @@ section.main-content {
 }
 
 .item-detail {
-
   p {
     margin: 0 !important;
     text-indent: unset !important;
@@ -397,12 +399,11 @@ section.main-content {
   }
 }
 
-
 .bagde {
   z-index: 50;
   display: block;
   position: absolute;
-  padding: .2em .7em;
+  padding: 0.2em 0.7em;
   &.bagde-right-bottom {
     bottom: 14px;
     right: 10px;
@@ -424,16 +425,16 @@ section.main-content {
 .pagination {
   .page-item {
     .page-link {
-      font-size: .9em;
-      color: map-get($theme-colors, 'dark');
+      font-size: 0.9em;
+      color: map-get($theme-colors, "dark");
       border-radius: 0;
     }
     &.active {
       .page-link {
-        font-size: .8em;
-        background: map-get($theme-colors, 'dark');
-        border-color: map-get($theme-colors, 'dark');
-        color: map-get($theme-colors, 'light');
+        font-size: 0.8em;
+        background: map-get($theme-colors, "dark");
+        border-color: map-get($theme-colors, "dark");
+        color: map-get($theme-colors, "light");
       }
     }
   }
@@ -449,7 +450,7 @@ section.main-content {
 .banner {
   position: relative;
   > div {
-    @include aspect-ratio(7,1);
+    @include aspect-ratio(7, 1);
     > img {
       height: 100%;
       width: 100%;
@@ -468,7 +469,7 @@ section.main-content {
       align-items: center;
       justify-content: center;
       > span {
-        background-color: transparentize(map-get($theme-colors, 'dark'), .3);
+        background-color: transparentize(map-get($theme-colors, "dark"), 0.3);
         width: 150px;
         height: 150px;
         border-radius: 50%;
@@ -477,13 +478,13 @@ section.main-content {
         align-items: center;
         justify-content: center;
         &.home {
-          background-color: map-get($theme-colors, 'light');
+          background-color: map-get($theme-colors, "light");
         }
         h3 {
           padding: 0;
           margin: 0;
           text-align: center;
-          color: map-get($theme-colors, 'light');
+          color: map-get($theme-colors, "light");
           text-transform: uppercase;
           font-size: 1.1em;
         }
@@ -498,13 +499,16 @@ section.main-content {
     height: 100%;
     display: block;
     content: " ";
-    @include linear-gradient(to right, transparentize(map-get($theme-colors, 'red'), .6), transparentize(map-get($theme-colors, 'blue'), .6));
+    @include linear-gradient(
+      to right,
+      transparentize(map-get($theme-colors, "red"), 0.6),
+      transparentize(map-get($theme-colors, "blue"), 0.6)
+    );
     z-index: 1;
   }
 }
 
 .feedinsta {
-
   margin-top: 8px;
   margin-bottom: 8px;
 
@@ -530,24 +534,24 @@ section.main-content {
   text-transform: uppercase;
   display: inline-block;
   font-family: $font-title;
-  border-top: 1px solid map-get($theme-colors, 'dark');
-  color: map-get($theme-colors, 'dark');
+  border-top: 1px solid map-get($theme-colors, "dark");
+  color: map-get($theme-colors, "dark");
   text-decoration: none;
   margin: auto;
   margin-top: 1em;
   margin-bottom: 15px;
-  padding: .5em 1em 0em 1em;
+  padding: 0.5em 1em 0em 1em;
   text-align: center;
 }
 .heading-name {
   font-weight: 400;
   text-transform: uppercase;
   display: inline-block;
-  border-bottom: 1px solid map-get($theme-colors, 'dark');
-  color: map-get($theme-colors, 'dark');
+  border-bottom: 1px solid map-get($theme-colors, "dark");
+  color: map-get($theme-colors, "dark");
   text-decoration: none;
   margin: auto;
-  padding: 0em 1em .5em 1em;
+  padding: 0em 1em 0.5em 1em;
   text-align: center;
 }
 
@@ -560,8 +564,8 @@ section.main-content {
 }
 
 .btn-outline-secondary {
-  border-color: map-get($theme-colors, 'dark');
-  color: map-get($theme-colors, 'dark');
+  border-color: map-get($theme-colors, "dark");
+  color: map-get($theme-colors, "dark");
 
   &.black {
     border-radius: 0;
@@ -572,12 +576,12 @@ section.main-content {
 
   &:hover {
     color: white !important;
-    background-color: map-get($theme-colors, 'dark');
+    background-color: map-get($theme-colors, "dark");
   }
 }
 
 .new-product-lb {
-  background-color: #E91E63 !important;
+  background-color: #e91e63 !important;
   font-size: 0.8em;
 }
 
@@ -604,7 +608,7 @@ h2.event-detail-title {
 h6.event-detail-title,
 h3.event-detail-title {
   font-size: 1.15em;
-  text-transform:uppercase;
+  text-transform: uppercase;
 }
 
 .modal-loading {
@@ -618,10 +622,7 @@ h3.event-detail-title {
 }
 
 .product-detail-loading {
-
 }
-
-
 
 .event-title {
   letter-spacing: -1px;
@@ -652,7 +653,7 @@ h3.event-detail-title {
   border-radius: 0px;
   .card-header {
     border-radius: 0 !important;
-    background-color: map-get($theme-colors, 'black') !important;
+    background-color: map-get($theme-colors, "black") !important;
 
     .card-title {
       margin-bottom: 0;
@@ -660,30 +661,30 @@ h3.event-detail-title {
       color: white;
     }
     .price {
-      color: map-get($theme-colors, 'success');
+      color: map-get($theme-colors, "success");
       font-family: $font-text;
       font-weight: 400;
       i {
-        margin-right: .3em;
+        margin-right: 0.3em;
         transform: rotate(-72deg);
       }
     }
   }
   .card-footer {
-    background-color: map-get($theme-colors, 'light');
+    background-color: map-get($theme-colors, "light");
     .info {
       span {
         font-family: $font-text;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        color: map-get($theme-colors, 'dark');
+        color: map-get($theme-colors, "dark");
         & + span {
           margin-left: 1em;
         }
         i {
           font-size: 1em;
-          margin-right: .35em;
+          margin-right: 0.35em;
         }
       }
     }
@@ -699,15 +700,15 @@ h3.event-detail-title {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: map-get($theme-colors, 'info');
+  color: map-get($theme-colors, "info");
   i {
-    margin-right: .5em;
+    margin-right: 0.5em;
   }
 }
 
 .newsletter-b {
-  background: map-get($theme-colors, 'purple');
-  color: map-get($theme-colors, 'light');
+  background: map-get($theme-colors, "purple");
+  color: map-get($theme-colors, "light");
   padding: 1em 15px;
 
   h4 {
@@ -717,7 +718,8 @@ h3.event-detail-title {
     padding-top: 7px;
     padding-bottom: 7px;
     padding-left: 60px;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAYAAACoYAD2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAARLSURBVHjazJhbbFVFFIa/c1oqtFJaouClXiMXI5oYgZgImCAmhFhMvCBo9AHUhBoVTZAa4puBCLG8SGsA7YtRiZpIkfqAl4REC1IaTdB4TTS2GluTttAWKQd+X/6jO9uzT8/Z54IrmcyemTVr/XtmzVprBkkUowwNDdVL+lzSmKSu4eHh6cWSTZEEzZfUK6lP0pOu+9xfsPyEJCagxcDFEWPngIXA826vAz4DbgNec99LwGEgGSHjT+BQVgQT/MUulYd2x13Jm4CvgGagM8t/nvWKJoGKHPrDtBzYBtwMfJmJoTLL5PQWvwv8ROloxCBnRjEks0w+7fpySktp+X9FMVTGEFoJbARmAMpjXgIY8Kql8lWYzdYyUQXwGHBNjB/8BWiJAHk2Dsj+LGZwbRG3O+F6II5Ntk5kK0WiU65fyWclrwO6gWl2Icqw3WuA6TEADQJvhrb2nMsy4ARwC/BDNme+2s71G0mrJKUkLQnxXCCpP6bTHpA0OSRvkfU8IOm4+R6Mit07zbDf7Xq3b88QBaok1Umalkep87ywrMXWc5HbHW63/QNyZGRkpqROD2wKTF7qviXFymYiyiLruTPQt9F9H46Ojl5aWVNT0wNcZjt7O2AJ4zEPwhUOccmQPSdtk4dsg2EK6ttud7W3urq6qxKo98Buu4O33K52PSVPkPcDL0eMnXQQCHqMKSF9AKuBXf6egZPUpwIZz3Yv+YWSDkiak+f2VUuaK+l618HSkIF/lvXUur3NOPZIelrSWBrkwyFbOOZTTBnLJEnd1v+c+x4JgtwcYF4WcBkLygRwfkBn8AC9IGksHXGCsfQj281x4Avg2RJHnA3AUeBrp2sHA2NnsoXFAeBGoM2HYH+JAHYAO4BXgXlR+UJyAiFNznjuAn4G5hQJ3GzgV6AReBxYn405mYPAPcAs4BLgW+DeAgHeA3zn2D/bro9CQQL8CNQCH/g6EeUHm4FjgdtjmFqA94ADQN1/EokCQaYjQiPwIjAWGpsEHAG22vi3+NBVZZCx1eZzJmfNdkGbCnAft0o6bfexwn0r3B73eFzZzUEXFJfWA13A717B9NW30+0+jzcVoqQQkG84e28Hrs7gPvp9D2oHdjrZLRvIK71yDwFrXbJRmmcN8AdwValBrnQKVes0vz3Hee3mr7G/vbtUIHcA+4BPgKlAT54/2ON5HwPvZ3FjsUBONbANdh93RCStOTkTX7i2OCf41LsS+3EAb1G3v5daaDFos2UdBIaBBQE9ea1kkyd+7ytBsQAGs60Gh8ijwBMTgUyE+vfabbQ7qegtURbUB8wFXvfjwDuZXjeSoXeYBk9c5exnLeWhdcCjwH3Ab3Zz/+JyWGwMZMcnJc0r89UhXW6QdMI4Fkpamb4+jEg67LrtPIELl1bjOSJpMCFpzNfKXuAZYLLTqPNFQ77ytvjAnkqkUqnWioqK5U5Cq/j/0DgwmEqlOv4eAAWz5zJHvWYOAAAAAElFTkSuQmCC) no-repeat 0 0;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAYAAACoYAD2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAARLSURBVHjazJhbbFVFFIa/c1oqtFJaouClXiMXI5oYgZgImCAmhFhMvCBo9AHUhBoVTZAa4puBCLG8SGsA7YtRiZpIkfqAl4REC1IaTdB4TTS2GluTttAWKQd+X/6jO9uzT8/Z54IrmcyemTVr/XtmzVprBkkUowwNDdVL+lzSmKSu4eHh6cWSTZEEzZfUK6lP0pOu+9xfsPyEJCagxcDFEWPngIXA826vAz4DbgNec99LwGEgGSHjT+BQVgQT/MUulYd2x13Jm4CvgGagM8t/nvWKJoGKHPrDtBzYBtwMfJmJoTLL5PQWvwv8ROloxCBnRjEks0w+7fpySktp+X9FMVTGEFoJbARmAMpjXgIY8Kql8lWYzdYyUQXwGHBNjB/8BWiJAHk2Dsj+LGZwbRG3O+F6II5Ntk5kK0WiU65fyWclrwO6gWl2Icqw3WuA6TEADQJvhrb2nMsy4ARwC/BDNme+2s71G0mrJKUkLQnxXCCpP6bTHpA0OSRvkfU8IOm4+R6Mit07zbDf7Xq3b88QBaok1Umalkep87ywrMXWc5HbHW63/QNyZGRkpqROD2wKTF7qviXFymYiyiLruTPQt9F9H46Ojl5aWVNT0wNcZjt7O2AJ4zEPwhUOccmQPSdtk4dsg2EK6ttud7W3urq6qxKo98Buu4O33K52PSVPkPcDL0eMnXQQCHqMKSF9AKuBXf6egZPUpwIZz3Yv+YWSDkiak+f2VUuaK+l618HSkIF/lvXUur3NOPZIelrSWBrkwyFbOOZTTBnLJEnd1v+c+x4JgtwcYF4WcBkLygRwfkBn8AC9IGksHXGCsfQj281x4Avg2RJHnA3AUeBrp2sHA2NnsoXFAeBGoM2HYH+JAHYAO4BXgXlR+UJyAiFNznjuAn4G5hQJ3GzgV6AReBxYn405mYPAPcAs4BLgW+DeAgHeA3zn2D/bro9CQQL8CNQCH/g6EeUHm4FjgdtjmFqA94ADQN1/EokCQaYjQiPwIjAWGpsEHAG22vi3+NBVZZCx1eZzJmfNdkGbCnAft0o6bfexwn0r3B73eFzZzUEXFJfWA13A717B9NW30+0+jzcVoqQQkG84e28Hrs7gPvp9D2oHdjrZLRvIK71yDwFrXbJRmmcN8AdwValBrnQKVes0vz3Hee3mr7G/vbtUIHcA+4BPgKlAT54/2ON5HwPvZ3FjsUBONbANdh93RCStOTkTX7i2OCf41LsS+3EAb1G3v5daaDFos2UdBIaBBQE9ea1kkyd+7ytBsQAGs60Gh8ijwBMTgUyE+vfabbQ7qegtURbUB8wFXvfjwDuZXjeSoXeYBk9c5exnLeWhdcCjwH3Ab3Zz/+JyWGwMZMcnJc0r89UhXW6QdMI4Fkpamb4+jEg67LrtPIELl1bjOSJpMCFpzNfKXuAZYLLTqPNFQ77ytvjAnkqkUqnWioqK5U5Cq/j/0DgwmEqlOv4eAAWz5zJHvWYOAAAAAElFTkSuQmCC)
+      no-repeat 0 0;
   }
 
   h5 {
@@ -737,22 +739,22 @@ h3.event-detail-title {
     }
     div {
       &.input-group-prepend {
-        background: map-get($theme-colors, 'light');
-        color: map-get($theme-colors, 'purple');
+        background: map-get($theme-colors, "light");
+        color: map-get($theme-colors, "purple");
       }
       &.input-group-append {
-        background: map-get($theme-colors, 'dark');
+        background: map-get($theme-colors, "dark");
         cursor: pointer;
 
         &:hover {
-          background-color: lighten(map-get($theme-colors, 'dark'), $amount: 2);
+          background-color: lighten(map-get($theme-colors, "dark"), $amount: 2);
         }
       }
       span {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: .5em .7em;
+        padding: 0.5em 0.7em;
         //color: white;
       }
     }
@@ -764,7 +766,6 @@ h3.event-detail-title {
 }
 
 .modal-newsletter {
-
   /*button.close {
     color:white;
     opacity: 1;
@@ -787,7 +788,7 @@ h3.event-detail-title {
   .list-socials {
     .list-socials-item {
       a {
-        color: map-get($theme-colors, 'light');
+        color: map-get($theme-colors, "light");
       }
     }
 
@@ -813,34 +814,32 @@ h3.event-detail-title {
     }
     div {
       &.input-group-prepend {
-        background: map-get($theme-colors, 'light');
-        color: map-get($theme-colors, 'purple');
+        background: map-get($theme-colors, "light");
+        color: map-get($theme-colors, "purple");
       }
       &.input-group-append {
-        background: map-get($theme-colors, 'dark');
+        background: map-get($theme-colors, "dark");
         cursor: pointer;
 
         &:hover {
-          background-color: lighten(map-get($theme-colors, 'dark'), $amount: 2);
+          background-color: lighten(map-get($theme-colors, "dark"), $amount: 2);
         }
       }
       span {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: .5em .7em;
+        padding: 0.5em 0.7em;
         color: white;
       }
     }
   }
 }
 
-
 footer {
-
   .footing {
     background-color: black;
-    color: map-get($theme-colors, 'light');
+    color: map-get($theme-colors, "light");
     //padding-top: 1.5em;
     padding: 1.5em 0;
 
@@ -865,7 +864,7 @@ footer {
 
     h4 {
       font-weight: 400;
-      margin-bottom: .5em;
+      margin-bottom: 0.5em;
       font-size: 18px;
 
       & + p {
@@ -876,7 +875,7 @@ footer {
     .section {
       h4 {
         font-weight: 400;
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
         font-size: 18px;
       }
       ul {
@@ -889,8 +888,8 @@ footer {
     }
     #g-maps {
       width: 100%;
-      height: 190px;//150px;//350px;
-      background: lighten(map-get($theme-colors, 'dark'), 5%);
+      height: 190px; //150px;//350px;
+      background: lighten(map-get($theme-colors, "dark"), 5%);
     }
     img {
       height: 20px;
@@ -905,7 +904,7 @@ footer {
   position: relative;
   overflow: hidden;
 
-  input[type=file] {
+  input[type="file"] {
     position: absolute;
     top: 0;
     right: 0;
@@ -939,12 +938,8 @@ footer {
   }
 }
 
-
-
-
 /* Modal add to cart */
 .modal-cart {
-
   .layer_cart_img {
     #modal_cart_img {
       border: 1px solid #ddd;
@@ -959,10 +954,10 @@ footer {
 
   .ajax_cart_product_txt {
     font: 400 17px/22px $font-title, Helvetica, sans-serif;
-      border-bottom: 1px solid #e8e8e8;
-      padding-bottom: 13px;
-      margin-bottom: 17px;
-      display: block;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 13px;
+    margin-bottom: 17px;
+    display: block;
   }
 
   .layer_cart_product {
@@ -1009,7 +1004,7 @@ footer {
 
     /*right: 40px;
     top: 14px;*/
-    right: -10px;//45px;
+    right: -10px; //45px;
     top: -10px;
   }
 }
@@ -1060,10 +1055,8 @@ footer {
   }
 }
 
-
 .nav-pills {
   .nav-link {
-
     color: black;
     text-decoration: none;
 
@@ -1089,12 +1082,12 @@ select.form-control,
   background-color: white;
   border: 1px solid #d6d4d4;
   //border-radius: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-  -webkit-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s,
+    box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
-
 
 .table {
   td {
@@ -1103,7 +1096,6 @@ select.form-control,
 }
 
 .table-giftregistry {
-
   tr {
     th {
       vertical-align: middle;
@@ -1117,22 +1109,21 @@ select.form-control,
       padding: 4px;
     }
   }
-
 }
 
 .navbar-toggler {
   display: none;
 }
 
-@media (max-width:1200px) and (min-width:992px) {
+@media (max-width: 1200px) and (min-width: 992px) {
   .clearheader {
     height: 1px;
   }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
   .d-menu-none {
-      display: none !important;
+    display: none !important;
   }
 }
 
@@ -1173,16 +1164,58 @@ select.form-control,
   font-size: 14px;
 }
 
-
-.datepicker table tr td span.active.active.focus, .datepicker table tr td span.active.active:focus, .datepicker table tr td span.active.active:hover, .datepicker table tr td span.active.disabled.active.focus, .datepicker table tr td span.active.disabled.active:focus, .datepicker table tr td span.active.disabled.active:hover, .datepicker table tr td span.active.disabled:active.focus, .datepicker table tr td span.active.disabled:active:focus, .datepicker table tr td span.active.disabled:active:hover, .datepicker table tr td span.active.disabled:hover.active.focus, .datepicker table tr td span.active.disabled:hover.active:focus, .datepicker table tr td span.active.disabled:hover.active:hover, .datepicker table tr td span.active.disabled:hover:active.focus, .datepicker table tr td span.active.disabled:hover:active:focus, .datepicker table tr td span.active.disabled:hover:active:hover, .datepicker table tr td span.active:active.focus, .datepicker table tr td span.active:active:focus, .datepicker table tr td span.active:active:hover, .datepicker table tr td span.active:hover.active.focus, .datepicker table tr td span.active:hover.active:focus, .datepicker table tr td span.active:hover.active:hover, .datepicker table tr td span.active:hover:active.focus, .datepicker table tr td span.active:hover:active:focus, .datepicker table tr td span.active:hover:active:hover,
-.datepicker table tr td span.active.active, .datepicker table tr td span.active.disabled.active, .datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled:hover.active, .datepicker table tr td span.active.disabled:hover:active, .datepicker table tr td span.active:active, .datepicker table tr td span.active:hover.active, .datepicker table tr td span.active:hover:active,
-.datepicker table tr td.active.active.focus, .datepicker table tr td.active.active:focus, .datepicker table tr td.active.active:hover, .datepicker table tr td.active.highlighted.active.focus, .datepicker table tr td.active.highlighted.active:focus, .datepicker table tr td.active.highlighted.active:hover, .datepicker table tr td.active.highlighted:active.focus, .datepicker table tr td.active.highlighted:active:focus, .datepicker table tr td.active.highlighted:active:hover, .datepicker table tr td.active:active.focus, .datepicker table tr td.active:active:focus, .datepicker table tr td.active:active:hover,
-.datepicker table tr td.active.active, .datepicker table tr td.active.highlighted.active, .datepicker table tr td.active.highlighted:active, .datepicker table tr td.active:active {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545;
+.datepicker table tr td span.active.active.focus,
+.datepicker table tr td span.active.active:focus,
+.datepicker table tr td span.active.active:hover,
+.datepicker table tr td span.active.disabled.active.focus,
+.datepicker table tr td span.active.disabled.active:focus,
+.datepicker table tr td span.active.disabled.active:hover,
+.datepicker table tr td span.active.disabled:active.focus,
+.datepicker table tr td span.active.disabled:active:focus,
+.datepicker table tr td span.active.disabled:active:hover,
+.datepicker table tr td span.active.disabled:hover.active.focus,
+.datepicker table tr td span.active.disabled:hover.active:focus,
+.datepicker table tr td span.active.disabled:hover.active:hover,
+.datepicker table tr td span.active.disabled:hover:active.focus,
+.datepicker table tr td span.active.disabled:hover:active:focus,
+.datepicker table tr td span.active.disabled:hover:active:hover,
+.datepicker table tr td span.active:active.focus,
+.datepicker table tr td span.active:active:focus,
+.datepicker table tr td span.active:active:hover,
+.datepicker table tr td span.active:hover.active.focus,
+.datepicker table tr td span.active:hover.active:focus,
+.datepicker table tr td span.active:hover.active:hover,
+.datepicker table tr td span.active:hover:active.focus,
+.datepicker table tr td span.active:hover:active:focus,
+.datepicker table tr td span.active:hover:active:hover,
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover.active,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td.active.active.focus,
+.datepicker table tr td.active.active:focus,
+.datepicker table tr td.active.active:hover,
+.datepicker table tr td.active.highlighted.active.focus,
+.datepicker table tr td.active.highlighted.active:focus,
+.datepicker table tr td.active.highlighted.active:hover,
+.datepicker table tr td.active.highlighted:active.focus,
+.datepicker table tr td.active.highlighted:active:focus,
+.datepicker table tr td.active.highlighted:active:hover,
+.datepicker table tr td.active:active.focus,
+.datepicker table tr td.active:active:focus,
+.datepicker table tr td.active:active:hover,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.highlighted.active,
+.datepicker table tr td.active.highlighted:active,
+.datepicker table tr td.active:active {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
 }
-
 
 // Badges
 .badge-discount {

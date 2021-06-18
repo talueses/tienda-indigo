@@ -2,7 +2,13 @@
 @section('contenido')
 @include('partials.socialfixed')
 @include('partials.banner', ['brand'=>['name'=>'Carrito de Compras', 'img'=> asset('media/banner.jpg')]])
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript">
+    $.noConflict() </script>
+@section('page-js-script')
+<script type="text/javascript">
+  
+</script>
+@stop
 <div class="container">
 
   <div class="row mt-5">
@@ -57,11 +63,60 @@
         <p>Por favor cierra sesión y ingresa con una cuenta de usuario común.</p>
     @else
         <div id="app">
-
           <cart></cart>
-
         </div>
-    @endif
+
+        <button id="monto" class="btn btn-success">Pagar</button>
+        <script src="https://checkout.culqi.com/js/v3"></script>
+        <script>
+        var totalP="";
+    $('#monto').on('click', function(e) {
+      
+        totalP = Number(document.getElementById('total_price1').innerHTML)*100;
+        Culqi.publicKey = 'pk_test_enUyyIuFaZuVwi6T';
+        Culqi.settings({
+            title: 'Total Carrito',
+            currency: 'PEN',
+            description: 'Indigo Store',
+            amount: totalP      
+        });
+        // Abre el formulario con las opciones de Culqi.settings
+        Culqi.open();
+        e.preventDefault();
+        
+    });
+    function culqi() {
+      if (Culqi.token) { 
+      var token = Culqi.token.id;
+      var email = Culqi.token.email;
+      let _token   = $('meta[name="csrf-token"]').attr('content');
+      $.ajax({
+          url:'/ajax-request',
+          type:'POST',
+          data:{
+              precio:totalP,
+              token:token,
+              email:email,
+              _token: _token
+          }
+      }).done(function(resp){
+          alert(resp);
+        })
+
+      
+    } else { // ¡Hubo algún problema!
+      // Mostramos JSON de objeto error en consola
+      console.log(Culqi.error);
+      alert(Culqi.error.user_message);
+  }
+};
+</script>
+        <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+         
+          </script>
+
+            @endif
 
 
 </div>

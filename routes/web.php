@@ -58,9 +58,8 @@ Route::post('/getorderdetails', 'OrdenController@getOrderPaymDetails');
 
 Route::get('/contacto', 'HomeController@showContact')->name('home.contact');
 Route::post('/contacto', 'HomeController@contact');
-
+Route::post('/ajax-request', 'AjaxController@store');
 Route::post('/newsletter/subscribe', 'HomeController@newsletter');
-
 //User
 Route::get(	'/cuenta', 		'User\CustomerController@account')->name('customer.info');
 Route::get(	'/login', 		'User\CustomerController@showLogin')->name('home.login');
