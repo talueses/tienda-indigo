@@ -76,10 +76,10 @@
     <table class="mcnOrderProducts" style="border-collapse: collapse;width: 100%;">
       <tr>
         <th>&nbsp;</th>
-        <th style="width: 15%;"><small> Producto</small></th>
-        <th><small> Cantidad</small></th>
-        <th><small> Precio</small></th>
-        <th><small> Total</small></th>
+        <th style="width: 15%; text-align: center;"><small> Producto</small></th>
+        <th style="text-align: center;"><small> Cantidad</small></th>
+        <th style="text-align: center;"><small> Precio</small></th>
+        <th style="text-align: center;"><small> Total</small></th>
       </tr>
       @if($cart_products)
         @foreach($cart_products as $product)
@@ -92,7 +92,7 @@
             @endif
             </td>
 
-            <td><small><b>{{$product->nombre}}</b> {{ (isset($product->color)) ? '- '.ucfirst($product->color) : '' }}</small></td>
+            <td><small style="text-transform: capitalize;"><b>{{$product->nombre}}</b> {{ (isset($product->color)) ? '- '.ucfirst($product->color) : '' }}</small></td>
             <td><small>{{ $product->quantity }}</small></td>
             <td>
               <center>
@@ -113,15 +113,15 @@
       @endif
       <tr>
         <td colspan="4" style="color: #444444;"><b>Subtotal</b></td>
-        <td>{{ 'S/ ' . $subtotal }}</td>
+        <td style="font-size: 15px">{{ 'S/ ' . $subtotal }}</td>
       </tr>
       <tr>
         <td colspan="4" style="color: #444444;"><b>Costo de envío</b></td>
-        <td >{{ 'S/ ' . $costo_envio }}</td>
+        <td style="font-size: 15px">{{ 'S/ ' . $costo_envio }}</td>
       </tr>
       <tr>
         <td colspan="4" style="color: #444444;"><b>Total</b></td>
-        <td><small style="color:green"> <strong> S/  {{$total }} </strong> </small> </td>
+        <td><small style="color:green;font-size: 15px"> <strong> S/  {{$total }} </strong> </small> </td>
       </tr>
     </table>
 
@@ -205,6 +205,10 @@
         <![endif]-->
       </td>
     </tr>
+
+
+
+
 
 
 @include('mails.layouts.footer')

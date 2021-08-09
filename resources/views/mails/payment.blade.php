@@ -3,16 +3,16 @@
 
                         <!-- BEGIN TEMPLATE // -->
                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                      							<tr>
-                      								<td align="center" valign="top" id="templateHeader">
-                      									<!--[if (gte mso 9)|(IE)]>
-                      									<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
-                      									<tr>
-                      									<td align="center" valign="top" width="600" style="width:600px;">
-                      									<![endif]-->
-                      									<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
-                      										<tr>
-                                                      			<td valign="top" class="headerContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+                                    <tr>
+                                      <td align="center" valign="top" id="templateHeader">
+                                        <!--[if (gte mso 9)|(IE)]>
+                                        <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+                                        <tr>
+                                        <td align="center" valign="top" width="600" style="width:600px;">
+                                        <![endif]-->
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
+                                          <tr>
+                                                            <td valign="top" class="headerContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
                           <tbody class="mcnImageBlockOuter">
                                   <tr>
                                       <td valign="top" style="padding:9px" class="mcnImageBlockInner">
@@ -31,35 +31,35 @@
                                   </tr>
                           </tbody>
                       </table></td>
-										</tr>
-									</table>
-									<!--[if (gte mso 9)|(IE)]>
-									</td>
-									</tr>
-									</table>
-									<![endif]-->
-								</td>
+                    </tr>
+                  </table>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
+                </td>
                             </tr>
-							<tr>
-								<td align="center" valign="top" id="templateBody">
-									<!--[if (gte mso 9)|(IE)]>
-									<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
-									<tr>
-									<td align="center" valign="top" width="600" style="width:600px;">
-									<![endif]-->
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
-										<tr>
-                                			<td valign="top" class="bodyContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+              <tr>
+                <td align="center" valign="top" id="templateBody">
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+                  <tr>
+                  <td align="center" valign="top" width="600" style="width:600px;">
+                  <![endif]-->
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
+                    <tr>
+                                      <td valign="top" class="bodyContainer"><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
+                <!--[if mso]>
+        <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+        <tr>
+        <![endif]-->
 
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
+        <!--[if mso]>
+        <td valign="top" width="600" style="width:600px;">
         <![endif]-->
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
@@ -76,10 +76,10 @@
                             <table class="mcnOrderProducts" style="border-collapse: collapse;width: 100%;">
                                 <tr>
                                   <th>&nbsp;</th>
-                                  <th style="width: 15%;"><small>Producto</small></th>
-                                  <th><small> Cantidad</small></th>
-                                  <th><small> Precio</small></th>
-                                  <th><small> Total</small></th>
+                                  <th style="width: 15%;" style="text-align: center;"><small>Producto</small></th>
+                                  <th style="text-align: center;"><small> Cantidad</small></th>
+                                  <th style="text-align: center;"><small> Precio</small></th>
+                                  <th style="text-align: center;"><small> Total</small></th>
                                 </tr>
                                 @if($cart_products)
                                   @foreach($cart_products as $product)
@@ -92,7 +92,7 @@
                                       @endif
                                       </td>
  
-                                      <td><small><b>{{$product->nombre}}</b> {{ (isset($product->color)) ? '- '.ucfirst($product->color) : '' }}</small></td>
+                                      <td><small style="text-transform:capitalize"><b>{{$product->nombre}}</b> {{ (isset($product->color)) ? '- '.ucfirst($product->color) : '' }}</small></td>
                                       <td><small>{{ $product->quantity }}</small></td>
                                       <td>
                                         <center>
@@ -101,27 +101,27 @@
                                             <br><small style="color: red"> - S/ {{$product->dsct}}</small><br>
                                             <small style="color: #5c116e;">{{$product->precio - $product->dsct }}</small>
                                           @else
-                                            <small><strong> S/ {{ $product->precio  }}</strong></small>
+                                            <small style="font-size: 15px"><strong> S/ {{ $product->precio  }}</strong></small>
                                           @endif
                                         </center>
                                       </td>
                                       {{-- <td><small>{{ $product->dsct != 0 ? 'S/ '.$product->dsct: '--' }}</small></td> --}}
-                                    <td><small style="color:teal"> <strong> S/ {{ ($product->precio - $product->dsct) * $product->quantity}} </strong></small></td>
+                                    <td><small style="color:teal;font-size:15px"> <strong> S/ {{ ($product->precio - $product->dsct) * $product->quantity}} </strong></small></td>
 
                                   </tr>
                                   @endforeach
                                 @endif
                                 <tr>
                                   <td colspan="4" style="color: #444444;"><b>Subtotal</b></td>
-                                  <td>{{ 'S/ ' . $total }}</td>
+                                  <td style="font-size: 15px">{{ 'S/ ' . $total }}</td>
                                 </tr>
                                 <tr>
                                   <td colspan="4" style="color: #444444;"><b>Costo de envío</b></td>
-                                  <td >{{ 'S/ ' . $costo_envio }}</td>
+                                  <td style="font-size: 15px">{{ 'S/ ' . $costo_envio }}</td>
                                 </tr>
                                 <tr>
                                   <td colspan="4" style="color: #444444;"><b>Total</b></td>
-                                  <td><small style="color:green"> <strong> S/  {{$total }} </strong> </small> </td>
+                                  <td><small style="color:green;font-size:15px "> <strong> S/  {{$total }} </strong> </small> </td>
                                 </tr>
                               </table>
 
@@ -148,10 +148,10 @@
                               <h3 style="font-weight:bold;">Método de Pago</h3>
                               <table class="mcnOrderProducts" style="border-collapse: collapse;width: 100%;">
                                   <tr>
-                                    <th style="width: 40%;">Tarjeta</th>
-                                    <th>Importe</th>
-                                    <th>Fecha de Pago</th>
-                                    <th># Tarjeta</th>
+                                    <th style="width: 40%;text-align: center;">Tarjeta</th>
+                                    <th style="text-align: center;">Importe</th>
+                                    <th style="text-align: center;">Fecha de Pago</th>
+                                    <th style="text-align: center;"># Tarjeta</th>
                                   </tr>
                                   <tr>
                                     <td>{{ ucfirst($pago['metodo']) }}</td>
@@ -205,14 +205,14 @@
                     </tr>
                 </tbody>
               </table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
+        <!--[if mso]>
+        </td>
+        <![endif]-->
 
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
+        <!--[if mso]>
+        </tr>
+        </table>
+        <![endif]-->
             </td>
         </tr>
     </tbody>
@@ -220,14 +220,14 @@
 
 
                                     </td>
-              										</tr>
-              									</table>
-              									<!--[if (gte mso 9)|(IE)]>
-              									</td>
-              									</tr>
-              									</table>
-              									<![endif]-->
-              								</td>
+                                  </tr>
+                                </table>
+                                <!--[if (gte mso 9)|(IE)]>
+                                </td>
+                                </tr>
+                                </table>
+                                <![endif]-->
+                              </td>
                             </tr>
 
 

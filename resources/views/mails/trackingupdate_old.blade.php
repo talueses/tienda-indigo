@@ -1,5 +1,7 @@
 @include('mails.layouts.header', ['title' => "Orden Tracking"])
 
+
+
 <!-- BEGIN TEMPLATE // -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
             <tr>
@@ -76,10 +78,10 @@
     <table class="mcnOrderProducts" style="border-collapse: collapse;width: 100%;">
         <tr>
           <th>&nbsp;</th>
-          <th style="width: 35%;">Producto</th>
-          <th>Cantidad</th>
-          <th>Precio</th>
-          <th>Total</th>
+          <th style="width: 35%;text-align: center;">Producto</th>
+          <th style="text-align:center;">Cantidad</th>
+          <th style="text-align:center;">Precio</th>
+          <th style="text-align:center;">Total</th>
         </tr>
         @if($cart_products)
           @foreach($cart_products as $product)
@@ -91,24 +93,24 @@
                 <img class="img-list-default" height="80" width="80" style="object-fit: cover;" alt="{{ $product->nombre }}">
               @endif
               </td>
-              <td><b>{{ $product->nombre }}</b> {{ (isset($product->color)) ? '- '.ucfirst($product->color) : '' }}</td>
-              <td>{{ $product->quantity }}</td>
-              <td>S/ {{ $product->precio }}</td>
-              <td>S/ {{ $product->total }}</td>
+              <td style="text-transform: capitalize;text-align: center;"><b>{{ $product->nombre }}</b> {{ (isset($product->color)) ? '- '.ucfirst($product->color) : '' }}</td>
+              <td style="text-align: center;">{{ $product->quantity }}</td>
+              <td style="text-align: center;">S/ {{ $product->precio }}</td>
+              <td style="text-align: center;">S/ {{ $product->total }}</td>
             </tr>
           @endforeach
         @endif
         <tr>
           <td colspan="3" style="color: #444444;"><b>Subtotal</b></td>
-          <td colspan="2">{{ 'S/ ' . $subtotal }}</td>
+          <td colspan="2" style="font-size: 15px">{{ 'S/ ' . $subtotal }}</td>
         </tr>
         <tr>
           <td colspan="3" style="color: #444444;"><b>Env&iacute;o</b></td>
-          <td colspan="2">{{ 'S/ ' . $costo_envio }}</td>
+          <td colspan="2" style="font-size: 15px">{{ 'S/ ' . $costo_envio }}</td>
         </tr>
         <tr>
           <td colspan="3" style="color: #444444;"><b>Total</b></td>
-          <td colspan="2">{{ 'S/ ' . $total }}</td>
+          <td colspan="2" style="font-size: 15px">{{ 'S/ ' . $total }}</td>
         </tr>
 
       </table>
@@ -193,6 +195,8 @@
         <![endif]-->
       </td>
     </tr>
+
+
 
 
 @include('mails.layouts.footer')
