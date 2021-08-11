@@ -136,7 +136,8 @@
                               @if($free_delivery)
                               <br>
                     
-                              <h3 style="font-weight:bold;">Delivery Gratuito</h3>
+                              <h3 style="font-weight:bold;">Información de entrega:</h3>
+                              <p>Delivery todos los miércoles de 3 p.m. a 7 p.m. Recojo en tienda a partir de las 2 p.m. del día siguiente de efectuada la compra, en el horario de la galería.</p>
 
                               <div style="background-color:#5c116e;color:white;padding: 5px 10px;">
                               {{ $free_delivery }}
